@@ -7,12 +7,16 @@ class Link < Post
   end
 
   def read_from_console
-    #todo
+    puts "Адрес сылки: "
+    @url = STDIN.gets.chomp
+
+    puts "Что за ссылка?"
+    @text = STDIN.gets.chomp
   end
 
   def to_string
-    #todo
+    time_string = "Создано: #{@created_at.strftime("%Y-%m-%d_%H-%M-%S.txt")} \n\r \n\r"
+
+    [@url, @text, time_string]
   end
-
-
 end
